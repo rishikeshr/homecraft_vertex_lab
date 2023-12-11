@@ -141,7 +141,7 @@ POST _reindex
 
 This will let users to submit queries for their past orders. We are not creating embeddings on this index because keyword search will suffice (e.g. searching for userID, productID). Wait for the job to complete and check the data is correctly indexed in Elastic from the indices list in the UI.
 
-13. Let's test a Vector Search query directly from the Kibana Dev Tools. We will later see this embedded in our app. You can copy paste the following query from [this file](https://github.com/valerioarvizzigno/homecraft_vertex/blob/main/Additional%20sources/helpful_elastic_api_calls).
+13. Let's test a Vector Search query directly from the Kibana Dev Tools. We will later see this embedded in our app. You can copy paste the following query from [this file](https://github.com/rishikeshr/homecraft_vertex/blob/main/Additional%20sources/helpful_elastic_api_calls). 
 
 ![image](https://github.com/valerioarvizzigno/homecraft_vertex_lab/assets/122872322/1a6e0079-7b51-4791-adfe-6b863037a9b5)
 
