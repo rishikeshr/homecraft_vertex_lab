@@ -14,8 +14,8 @@ This is the step-by-step guide for enablement hands-on labs, and refers to the c
    - Leave everything else as it is by default
    - Create the cluster and download/note down the username/password
      
-  ![image](https://github.com/valerioarvizzigno/homecraft_vertex_lab/assets/122872322/916ea8c4-1230-497a-bb06-cb09db57ee7c)
-  ![image](https://github.com/valerioarvizzigno/homecraft_vertex_lab/assets/122872322/7e11519d-1b73-4f19-93b2-bd7f166a72ca)
+  ![image](https://github.com/rishikeshr/homecraft_vertex_lab/assets/122872322/916ea8c4-1230-497a-bb06-cb09db57ee7c)
+  ![image](https://github.com/rishikeshr/homecraft_vertex_lab/assets/122872322/7e11519d-1b73-4f19-93b2-bd7f166a72ca)
 
 
 3. As a first step we need to prepare our Elastic ML nodes to create text-embedding out of content we will be indexing. We just need to load our transformer model of choice into Elastic and start it. This can be done through the [Eland Client](https://github.com/elastic/eland). We will use the [all-distillroberta-v1](https://huggingface.co/sentence-transformers/all-distilroberta-v1) ML model. To run Eland client you need docker installed. An easy way to accomplish this step without python/docker installation is via Google's Cloud Shell. Be sure the eland version you're cloning is compatible with the Elastic version you choose (e.g. generally eland 8.11 works with elastic cloud 8.11)! If you used the latest Elastic version, there's generally no need to specify the Eland release version while cloning.
@@ -41,7 +41,7 @@ docker run -it --rm elastic/eland eland_import_hub_model --url https://<elastic_
    - For better crawling performance search the sitemap.xml filepath inside the robots.txt file of the target webserver, and add its path to the Site Maps tab.
    - To avoid crawling too many pages and stick with the english ones we can define some crawl rules. Set as follows (rule order counts!):
      
-     ![image](https://github.com/valerioarvizzigno/homecraft_vertex_lab/assets/122872322/1f0d52cc-2d01-4b5d-9c0e-927042ccd932)
+     ![image](https://github.com/rishikeshr/homecraft_vertex_lab/assets/122872322/1f0d52cc-2d01-4b5d-9c0e-927042ccd932)
 
 6. Now the new empty index should be automatically created for you. Have a look at it:
    - From the left panel, in the "Enterprise Search" section, select "Content" and click on index to explore its details.
@@ -62,7 +62,7 @@ docker run -it --rm elastic/eland eland_import_hub_model --url https://<elastic_
   
 8. Check the newly created ingest pipeline searching for it from the "Stack Management" -> "Ingest pipelines" section. You are able to analyze the processors (the processing tasks) listed in the pipeline and add/remove/modify them. Note also that you can specify exception handlers.
  
-   ![image](https://github.com/valerioarvizzigno/homecraft_vertex_lab/assets/122872322/761cf843-c238-4f14-8fc2-47a6157f98b3)
+   ![image](https://github.com/rishikeshr/homecraft_vertex_lab/assets/122872322/761cf843-c238-4f14-8fc2-47a6157f98b3)
 
 
 9. Before launching the crawler we need to set the mappings for the target field where the vetors will be stored, specifying the "title-vector" field is of type "dense_vector", vector dimensions and its similarity algorithm. Let's execute the mapping API from the Dev Tools:
@@ -136,14 +136,14 @@ POST _reindex
        - Elastic username and password
        - Launch the job
       
-![image](https://github.com/valerioarvizzigno/homecraft_vertex_lab/assets/122872322/8708b87f-5855-447d-b6de-db7632a515cb)
+![image](https://github.com/rishikeshr/homecraft_vertex_lab/assets/122872322/8708b87f-5855-447d-b6de-db7632a515cb)
 
 
 This will let users to submit queries for their past orders. We are not creating embeddings on this index because keyword search will suffice (e.g. searching for userID, productID). Wait for the job to complete and check the data is correctly indexed in Elastic from the indices list in the UI.
 
 13. Let's test a Vector Search query directly from the Kibana Dev Tools. We will later see this embedded in our app. You can copy paste the following query from [this file](https://github.com/rishikeshr/homecraft_vertex/blob/main/Additional%20sources/helpful_elastic_api_calls). 
 
-![image](https://github.com/valerioarvizzigno/homecraft_vertex_lab/assets/122872322/1a6e0079-7b51-4791-adfe-6b863037a9b5)
+![image](https://github.com/rishikeshr/homecraft_vertex_lab/assets/122872322/1a6e0079-7b51-4791-adfe-6b863037a9b5)
 
 We are executing the classic "_search" API call, to query documents in Elasticsearch. The Semantic Search component is provided by the "knn" clause, where we specify the field we want to search vectors into (title-vector), the number of relevant documents we want to extract and the user provided query. Note that, to compare vectors also the user query has to be translated into text-embeddings from our ML model. We are then specifying the "text_embedding" field in the API call: this will let create vectors on-the-fly on the user query and compare them with the stored documents.
 The "query" clause, instead, will enable keyword search on the same elastic index. This way we are using both techniques but still receiving an unified output.
@@ -165,10 +165,10 @@ sudo apt install python3
 
 ```
 
-16. Clone the [homecraft_vertex source-code repo](https://github.com/valerioarvizzigno/homecraft_vertex) on your CE machine.
+16. Clone the [homecraft_vertex source-code repo](https://github.com/rishikeshr/homecraft_vertex) on your CE machine.
 
 ```bash
-git clone https://github.com/valerioarvizzigno/homecraft_vertex.git
+git clone https://github.com/rishikeshr/homecraft_vertex.git
 ```
 
 17. Install requirements needed to run the app from the requirements.txt file. After this step, close the SSH session and reopen it, to ensure all the $PATH variables are refreshed (otherwise you can get a "streamlit command not found" error). You can have a look at the requirements.txt file content via vim/nano or your favourite editor.
