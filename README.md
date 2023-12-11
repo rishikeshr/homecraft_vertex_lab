@@ -2,9 +2,6 @@
 
 This is the step-by-step guide for enablement hands-on labs, and refers to the code repo [https://github.com/rishikeshr/homecraft_vertex](https://github.com/rishikeshr/homecraft_vertex)
 
---- TESTED WITH ELASTIC CLOUD 8.8.1 AND ELAND 8.3 ---
-
-
 ## Configuration steps
 
 1. Sign-up to a [free trial account](https://www.elastic.co/cloud/elasticsearch-service/signup) of Elastic (or alternatively subscribe via GCP MP)
