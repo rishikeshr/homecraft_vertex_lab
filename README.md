@@ -14,7 +14,7 @@ This is the step-by-step guide for enablement hands-on labs, and refers to the c
    - Leave everything else as it is by default
    - Create the cluster and download/note down the username/password
      
-  ![image](https://github.com/rishikeshr/homecraft_vertex_lab/assets/122872322/916ea8c4-1230-497a-bb06-cb09db57ee7c)
+  ![image]([https://github.com/rishikeshr/homecraft_vertex_lab/assets/122872322/916ea8c4-1230-497a-bb06-cb09db57ee7c](https://private-user-images.githubusercontent.com/122872322/276615859-916ea8c4-1230-497a-bb06-cb09db57ee7c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDIzOTE5NTUsIm5iZiI6MTcwMjM5MTY1NSwicGF0aCI6Ii8xMjI4NzIzMjIvMjc2NjE1ODU5LTkxNmVhOGM0LTEyMzAtNDk3YS1iYjA2LWNiMDlkYjU3ZWU3Yy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMjEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTIxMlQxNDM0MTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01YTRjZWM4ZDQ5N2U0NDE5OTczZjgyZDM2Y2RhZjdiMTdjZGNmZWM1YzIzMjZkMGFmNDY3NWQ4NTNkNTYxMThkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.ugBtx9fPOAUwzGEFzLVkrYgfrTn7rcoJ7PXtC30qrUQ))
   ![image](https://github.com/rishikeshr/homecraft_vertex_lab/assets/122872322/7e11519d-1b73-4f19-93b2-bd7f166a72ca)
 
 
